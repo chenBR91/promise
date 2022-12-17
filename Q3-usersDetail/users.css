@@ -1,0 +1,24 @@
+
+.all-users {
+    display: flex;
+    justify-content: center;
+    border: 0px solid black;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 0px solid red;
+    width: 15%;
+    text-align: center;
+    margin: 5px;
+}
+
+.name {
+    font-size: x-large;
+}
+
+.email {
+    font-size: larger
+}

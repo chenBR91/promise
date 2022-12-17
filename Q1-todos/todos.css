@@ -1,0 +1,21 @@
+
+.mainUlTodo {
+    border: 1px solid black;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lineTodo {
+    border: 0px solid red;
+    padding: 10px 10px;
+    border-bottom: 2px solid white;
+}
+
+.completedTrue {
+    background-color: rgb(69, 235, 180);
+}
+
+.completedFalse {
+    background-color: rgb(236, 148, 148);
+}
