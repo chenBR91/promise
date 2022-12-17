@@ -1,4 +1,9 @@
 const getAllUser = document.querySelector('.all-users')
+const modal = document.querySelector('.detail')
+const modalLeft = document.querySelector('.detail-side-left')
+const modalRight = document.querySelector('.detail-side-right')
+
+
 //const createUserDivElem = document.createElement('div');
 
 const getUsers = async function(){
@@ -18,6 +23,10 @@ const getUsers = async function(){
             CreateNameP.classList.add('name');
             createEmailP.classList.add('email')
 
+            // set name attribute
+            createAvatar.id = user.id  
+            //createUserDivElem.setAttribute('id', user.id)
+
             CreateNameP.innerText = `${user.first_name} ${user.last_name}`;
             createUserDivElem.appendChild(CreateNameP);
             createAvatar.src = user.avatar;
@@ -25,6 +34,17 @@ const getUsers = async function(){
             createEmailP.innerText = user.email;
             createUserDivElem.append(createEmailP)
             getAllUser.appendChild(createUserDivElem);
+
+            createUserDivElem.addEventListener('click', function(event){
+                console.log('user', user);
+                modal.style.display = 'block';
+                const imageDetail = document.createElement('img');
+                imageDetail.classList.add("imageDetail");
+                imageDetail.src = user.avatar;
+                modalLeft.append(imageDetail);
+                modal.append(modalLeft)
+                
+            })
         })
         
     }catch(error){

@@ -22,3 +22,18 @@
 .email {
     font-size: larger
 }
+
+.modal {
+    text-decoration: none;
+}
+
+
+.detail {
+    border: 1px solid red;
+    height: 450px;
+    display: none;
+}
+
+.imageDetail {
+    width: 10%;
+}
